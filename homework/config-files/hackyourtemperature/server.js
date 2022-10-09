@@ -15,7 +15,7 @@ app.get('/', (req,res) => {
 app.post('/weather',(req,res) => {
   const city = req.body.cityName
   if(!city){
-    return res.status(400).json({msg:'City not found!'})
+    return res.status(400).json({msg:'City not provided!'})
   }
   res.send(city)
 })
