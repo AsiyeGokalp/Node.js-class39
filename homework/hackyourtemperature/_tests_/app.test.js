@@ -2,6 +2,8 @@
 import supertest from 'supertest'
 import app from '../server.js'
 
+const request = supertest(app)
+
 describe("POST/weather", () => {
   describe("given a cityname", () => {
     test("should respond with a 200 status code", async () => {
